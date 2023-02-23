@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Calculator app</title>
+
+</head>
+<body
+class="background-1"
+id="background"
+>
+
+  <!-- Hold the container with the title and theme slider -->
+  <div 
+  class="title-container"
+  >
+  
+  <!-- Left flex container -->
+  <div 
+    class="left-container"
+    >
+      <p 
+      class="title-1"
+      id="title"
+      >
+        calc
+      </p>
+    </div>
+    
+    <!-- Right flex container -->
+    <div 
+    class="right-container"
+    >
+
+      <!-- Theme title -->
+      <p 
+      class="theme-1" 
+      id="theme"
+      >
+        THEME
+      </p>
+
+      <!-- Hold the container for the slider -->
+      <div 
+      class="slider-container"
+      >
+
+        <!-- Hold the slider range -->
+        <div 
+        class="slider-range-1"
+        id="slider-range"
+        >
+          <p 
+          class="theme-number"
+          >
+            1
+          </p>
+          <p 
+          class="theme-number"
+          >
+            2
+          </p>
+          <p 
+          class="theme-number"
+          >
+            3
+          </p>
+        </div>
+
+        <!-- Hold the slider input -->
+        <input 
+        class="slider-1"
+        id="currentTheme" 
+        max="3"
+        min="1" 
+        onchange="changeTheme()"
+        type="range"  
+        value="1" 
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- Hold the calculator screen -->
+  <div 
+  class="calculator-screen-1" 
+  id="screen"
+  >
+    
+  </div>
+
+  <!-- Hold the grids with the calculator buttons -->
+  <div 
+  class="grid-wrapper-1"
+  id="calculator-pad"
+  >
+    <div 
+    class="grid-1" 
+    id="small-buttons"
+    >
+      <div 
+      class="number-button-1"
+      onclick="printNumber(7)"
+      >
+        7
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="printNumber(8)"
+      >
+        8
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="printNumber(9)"
+      >
+        9
+      </div>
+      <div 
+      class="command-button-1"
+      onclick="handleDelete()"
+      >
+        DEL
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="printNumber(4)"
+      >
+        4
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="printNumber(5)"
+      >
+        5
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="printNumber(6)"
+      >
+        6
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="setOperand('+')"
+      >
+        +
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="printNumber(1)"
+      >
+        1
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="printNumber(2)"
+      >
+        2
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="printNumber(3)"
+      >
+        3
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="setOperand('-')"
+      >
+        -
+      </div>
+      <div 
+      class="number-button-1"
+      >
+        .
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="printNumber(0)"
+      >
+        0
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="setOperand('/')"
+      >
+        /
+      </div>
+      <div 
+      class="number-button-1"
+      onclick="setOperand('x')"
+      >
+        x
+      </div>
+    </div>
+    <div 
+    class="grid-2" 
+    id="big-buttons"
+    >
+      <div 
+      class="command-button-1"
+      id="reset"
+      onclick="reset()"
+      >
+        RESET
+      </div>
+      <div 
+      class="equals-1"
+      id="equals"
+      onclick="calculate()"
+      >
+        =
+      </div>
+    </div>
+  </div>
+  <script src="./utilities/main.js"></script>
+</body>
+</html>

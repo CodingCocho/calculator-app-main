@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.background-1 {
+  background-color: hsl(222deg, 26%, 31%);
+}
+
+.background-2 {
+  background-color: hsl(0deg, 0%, 90%);
+}
+
+.background-3 {
+  background-color: hsl(268deg, 75%, 9%);
+}
+
+.title-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 350px;
+}
+.title-container .left-container .title-1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 32px;
+}
+.title-container .left-container .title-2 {
+  color: hsl(60deg, 10%, 19%);
+  font-size: 32px;
+}
+.title-container .left-container .title-3 {
+  color: hsl(52deg, 100%, 62%);
+  font-size: 32px;
+}
+.title-container .right-container {
+  align-items: center;
+  display: flex;
+}
+.title-container .right-container .theme-1 {
+  color: hsl(0deg, 0%, 100%);
+  padding-right: 10px;
+}
+.title-container .right-container .theme-2 {
+  color: hsl(60deg, 10%, 19%);
+  padding-right: 10px;
+}
+.title-container .right-container .theme-3 {
+  color: hsl(52deg, 100%, 62%);
+  padding-right: 10px;
+}
+.title-container .right-container .slider-container .slider-range-1 {
+  align-items: center;
+  color: white;
+  display: flex;
+}
+.title-container .right-container .slider-container .slider-range-1 .theme-number {
+  text-align: center;
+  width: 25px;
+}
+.title-container .right-container .slider-container .slider-range-2 {
+  align-items: center;
+  color: hsl(60deg, 10%, 19%);
+  display: flex;
+}
+.title-container .right-container .slider-container .slider-range-2 .theme-number {
+  text-align: center;
+  width: 25px;
+}
+.title-container .right-container .slider-container .slider-range-3 {
+  align-items: center;
+  color: hsl(52deg, 100%, 62%);
+  display: flex;
+}
+.title-container .right-container .slider-container .slider-range-3 .theme-number {
+  text-align: center;
+  width: 25px;
+}
+
+#screen {
+  border-radius: 10px;
+  font-size: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  padding: 25px;
+  text-align: right;
+  width: 350px;
+}
+
+.calculator-screen-1 {
+  background-color: hsl(224deg, 36%, 15%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.calculator-screen-2 {
+  background-color: hsl(0deg, 0%, 93%);
+  color: hsl(60deg, 10%, 19%);
+}
+
+.calculator-screen-3 {
+  background-color: hsl(268deg, 71%, 12%);
+  color: hsl(52deg, 100%, 62%);
+}
+
+#calculator-pad {
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  padding: 25px;
+  width: 350px;
+}
+#calculator-pad .grid-1 {
+  display: grid;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  row-gap: 20px;
+  width: 100%;
+}
+#calculator-pad .grid-2 {
+  display: grid;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.grid-wrapper-1 {
+  background-color: hsl(223deg, 31%, 20%);
+}
+
+.grid-wrapper-2 {
+  background-color: hsl(0deg, 5%, 81%);
+}
+
+.grid-wrapper-3 {
+  background-color: hsl(268deg, 71%, 12%);
+}
+
+.number-button-1 {
+  align-items: center;
+  background-color: hsl(30deg, 25%, 89%);
+  border-radius: 5px;
+  box-shadow: 0px 5px hsl(28deg, 16%, 65%);
+  cursor: pointer;
+  display: flex;
+  font-size: 32px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+.number-button-1:hover {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.number-button-2 {
+  align-items: center;
+  background-color: hsl(45deg, 7%, 89%);
+  border-radius: 5px;
+  box-shadow: 0px 5px hsl(35deg, 11%, 61%);
+  color: hsl(60deg, 10%, 19%);
+  cursor: pointer;
+  display: flex;
+  font-size: 32px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+.number-button-2:hover {
+  background-color: hsl(45deg, 7%, 100%);
+}
+
+.number-button-3 {
+  align-items: center;
+  background-color: hsl(268deg, 47%, 21%);
+  border-radius: 5px;
+  box-shadow: 0px 5px hsl(290deg, 70%, 36%);
+  color: hsl(52deg, 100%, 62%);
+  cursor: pointer;
+  display: flex;
+  font-size: 32px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+.number-button-3:hover {
+  background-color: hsl(268deg, 47%, 31%);
+}
+
+.command-button-1 {
+  align-items: center;
+  background-color: hsl(225deg, 21%, 49%);
+  border-radius: 5px;
+  box-shadow: 0px 5px hsl(224deg, 28%, 35%);
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+.command-button-1:hover {
+  background-color: hsl(225deg, 21%, 60%);
+}
+
+.command-button-2 {
+  align-items: center;
+  background-color: hsl(185deg, 42%, 37%);
+  border-radius: 5px;
+  box-shadow: 0px 5px hsl(185deg, 58%, 25%);
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+.command-button-2:hover {
+  background-color: hsl(185deg, 42%, 47%);
+}
+
+.command-button-3 {
+  align-items: center;
+  background-color: hsl(281deg, 89%, 26%);
+  border-radius: 5px;
+  box-shadow: 0px 5px hsl(285deg, 91%, 52%);
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+.command-button-3:hover {
+  background-color: hsl(281deg, 89%, 36%);
+}
+
+#reset {
+  width: 140px;
+}
+
+.equals-1 {
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0px 5px hsl(6deg, 70%, 34%);
+  color: hsl(0deg, 0%, 100%);
+}
+.equals-1:hover {
+  background-color: hsl(6deg, 63%, 60%);
+}
+
+.equals-2 {
+  background-color: hsl(25deg, 98%, 40%);
+  box-shadow: 0px 5px hsl(25deg, 99%, 27%);
+  color: hsl(0deg, 0%, 100%);
+}
+.equals-2:hover {
+  background-color: hsl(25deg, 98%, 50%);
+}
+
+.equals-3 {
+  background-color: hsl(176deg, 100%, 44%);
+  box-shadow: 0px 5px hsl(177deg, 92%, 70%);
+  color: hsl(0deg, 0%, 100%);
+}
+.equals-3:hover {
+  background-color: hsl(176deg, 100%, 54%);
+}
+
+#equals {
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  font-size: 24px;
+  height: 60px;
+  justify-content: center;
+  width: 140px;
+}
+
+.slider-1 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  width: 75px;
+}
+
+.slider-1::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background-color: hsl(223deg, 31%, 20%);
+  border: none;
+  border-radius: 20px;
+  height: 25px;
+  padding: 0px 5px;
+}
+
+.slider-1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: red;
+  border-radius: 50%;
+  height: 15px;
+  margin-top: 5px;
+  width: 15px;
+}
+
+.slider-2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  width: 75px;
+}
+
+.slider-2::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background-color: hsl(0deg, 5%, 81%);
+  border: none;
+  border-radius: 20px;
+  height: 25px;
+  padding: 0px 5px;
+}
+
+.slider-2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: red;
+  border-radius: 50%;
+  height: 15px;
+  margin-top: 5px;
+  width: 15px;
+}
+
+.slider-3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  width: 75px;
+}
+
+.slider-3::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background-color: hsl(268deg, 71%, 12%);
+  border: none;
+  border-radius: 20px;
+  height: 25px;
+  padding: 0px 5px;
+}
+
+.slider-3::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: hsl(176deg, 100%, 44%);
+  border-radius: 50%;
+  height: 15px;
+  margin-top: 5px;
+  width: 15px;
+}
+
+@media screen and (min-width: 1440px) {
+  .title-container {
+    width: 700px;
+  }
+  #screen {
+    width: 700px;
+  }
+  #calculator-pad {
+    width: 700px;
+  }
+  #calculator-pad .grid-1 {
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+    row-gap: 40px;
+  }
+  #calculator-pad .grid-2 {
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+    margin-top: 40px;
+  }
+  #reset {
+    width: 300px;
+  }
+  #equals {
+    width: 300px;
+  }
+  .number-button-1, .number-button-2, .number-button-3 {
+    width: 120px;
+  }
+  .command-button-1, .command-button-2, .command-button-3 {
+    width: 120px;
+  }
+}/*# sourceMappingURL=style.css.map */

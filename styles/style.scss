@@ -1,0 +1,536 @@
+// Theme 1 colors
+$backgroundColor1: hsl(222, 26%, 31%);
+$calculatorColor1: hsl(223, 31%, 20%);
+$screenColor1: hsl(224, 36%, 15%);
+$equalColor1: hsl(6, 63%, 50%);
+$equalColorHover1: hsl(6, 63%, 60%);
+$equalShadow1: hsl(6, 70%, 34%);
+$numberButtons1: hsl(30, 25%, 89%);
+$numberShadow1: hsl(28, 16%, 65%);
+$otherColor1: hsl(225, 21%, 49%);
+$otherColorHover1: hsl(225, 21%, 60%);
+$otherShadow1: hsl(224, 28%, 35%);
+$darkTextColor1: hsl(221, 14%, 31%);
+$whiteTextColor: hsl(0, 0%, 100%);
+$numberSize: 32px;
+$fontFamily: 'League Spartan', sans-serif;
+$fontWeight: 700;
+
+// Theme 2 colors
+$backgroundColor2: hsl(0, 0%, 90%);
+$calculatorColor2: hsl(0, 5%, 81%);
+$screenColor2: hsl(0, 0%, 93%);
+$equalColor2: hsl(25, 98%, 40%);
+$equalColorHover2: hsl(25, 98%, 50%);
+$equalShadow2: hsl(25, 99%, 27%);
+$numberButtons2: hsl(45, 7%, 89%);
+$numberShadow2: hsl(35, 11%, 61%);
+$numberHoverColor2: hsl(45, 7%, 100%);
+$otherColor2: hsl(185, 42%, 37%);
+$otherColorHover2: hsl(185, 42%, 47%);
+$otherShadow2: hsl(185, 58%, 25%);
+$darkTextColor2: hsl(60, 10%, 19%);
+$whiteTextColor: hsl(0, 0%, 100%);
+
+// Theme 3 colors
+$backgroundColor3: hsl(268, 75%, 9%);
+$calculatorColor3: hsl(268, 71%, 12%);
+$equalColor3: hsl(176, 100%, 44%);
+$equalColorHover3: hsl(176, 100%, 54%);
+$equalShadow3: hsl(177, 92%, 70%);
+$numberButtons3: hsl(268, 47%, 21%);
+$numberShadow3: hsl(290, 70%, 36%);
+$numberHoverColor3: hsl(268, 47%, 31%);
+$otherColor3: hsl(281, 89%, 26%);
+$otherColorHover3: hsl(281, 89%, 36%);
+$otherShadow3: hsl(285, 91%, 52%);
+$darkTextColor3: hsl(52, 100%, 62%);
+$equalTextColor: hsl(198, 20%, 13%);
+$whiteTextColor: hsl(0, 0%, 100%);
+
+
+
+*
+{
+  box-sizing: border-box;
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+  margin: 0px;
+  padding: 0px;
+}
+
+body
+{
+  height: 100%;
+  width: 100%;
+}
+
+.background-1
+{
+  background-color: $backgroundColor1;
+}
+
+.background-2
+{
+  background-color: $backgroundColor2;
+}
+
+.background-3
+{
+  background-color: $backgroundColor3;
+}
+
+.title-container
+{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 350px;
+  .left-container
+  {
+    .title-1
+    {
+      color: $whiteTextColor;
+      font-size: $numberSize;
+    }
+    .title-2
+    {
+      color: $darkTextColor2;
+      font-size: $numberSize;
+    }
+    .title-3
+    {
+      color: $darkTextColor3;
+      font-size: $numberSize;
+    }
+  }
+  .right-container
+  {
+    align-items: center;
+    display: flex;
+    .theme-1
+    {
+      color: $whiteTextColor;
+      padding-right: 10px;
+    }
+    .theme-2
+    {
+      color: $darkTextColor2;
+      padding-right: 10px;
+    }
+    .theme-3
+    {
+      color: $darkTextColor3;
+      padding-right: 10px;
+    }
+    .slider-container
+    {
+      .slider-range-1
+      {
+        align-items: center;
+        color: white;
+        display: flex;
+        .theme-number
+        {
+          text-align: center;
+          width: 25px
+        }
+      }
+      .slider-range-2
+      {
+        align-items: center;
+        color: $darkTextColor2;
+        display: flex;
+        .theme-number
+        {
+          text-align: center;
+          width: 25px
+        }
+      }
+      .slider-range-3
+      {
+        align-items: center;
+        color: $darkTextColor3;
+        display: flex;
+        .theme-number
+        {
+          text-align: center;
+          width: 25px
+        }
+      }
+    }
+  }
+}
+
+#screen
+{
+  border-radius: 10px;
+  font-size: $numberSize;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  padding: 25px;
+  text-align: right;
+  width: 350px;
+}
+
+.calculator-screen-1
+{
+  background-color: $screenColor1;
+  color: $whiteTextColor;
+}
+
+.calculator-screen-2
+{
+  background-color: $screenColor2;
+  color: $darkTextColor2;
+}
+
+.calculator-screen-3
+{
+  background-color: $calculatorColor3;
+  color: $darkTextColor3;
+}
+
+#calculator-pad
+{
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  padding: 25px;
+  width: 350px;
+  .grid-1
+  {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 20px;
+    width: 100%;
+  }
+  .grid-2
+  {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.grid-wrapper-1
+{
+  background-color: $calculatorColor1;
+}
+
+.grid-wrapper-2
+{
+  background-color: $calculatorColor2;
+}
+
+.grid-wrapper-3
+{
+  background-color: $calculatorColor3;
+}
+
+.number-button-1
+{
+  align-items: center;
+  background-color: $numberButtons1;
+  border-radius: 5px;
+  box-shadow: 0px 5px $numberShadow1;
+  cursor: pointer;
+  display: flex;
+  font-size: $numberSize;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+  &:hover
+  {
+    background-color: $whiteTextColor;
+  }
+}
+
+.number-button-2
+{
+  align-items: center;
+  background-color: $numberButtons2;
+  border-radius: 5px;
+  box-shadow: 0px 5px $numberShadow2;
+  color: $darkTextColor2;
+  cursor: pointer;
+  display: flex;
+  font-size: $numberSize;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+  &:hover
+  {
+    background-color: $numberHoverColor2;
+  }
+}
+
+.number-button-3
+{
+  align-items: center;
+  background-color: $numberButtons3;
+  border-radius: 5px;
+  box-shadow: 0px 5px $numberShadow3;
+  color: $darkTextColor3;
+  cursor: pointer;
+  display: flex;
+  font-size: $numberSize;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+  &:hover
+  {
+    background-color: $numberHoverColor3;
+  }
+}
+
+.command-button-1
+{
+  align-items: center;
+  background-color: $otherColor1;
+  border-radius: 5px;
+  box-shadow: 0px 5px $otherShadow1;
+  color: $whiteTextColor;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+  &:hover
+  {
+    background-color: $otherColorHover1;
+  }
+}
+
+.command-button-2
+{
+  align-items: center;
+  background-color: $otherColor2;
+  border-radius: 5px;
+  box-shadow: 0px 5px $otherShadow2;
+  color: $whiteTextColor;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+  &:hover
+  {
+    background-color: $otherColorHover2;
+  }
+}
+
+.command-button-3
+{
+  align-items: center;
+  background-color: $otherColor3;
+  border-radius: 5px;
+  box-shadow: 0px 5px $otherShadow3;
+  color: $whiteTextColor;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+  &:hover
+  {
+    background-color: $otherColorHover3;
+  }
+}
+
+#reset
+{
+  width: 140px;
+}
+
+.equals-1
+{
+  background-color: $equalColor1;
+  box-shadow: 0px 5px $equalShadow1;
+  color: $whiteTextColor;
+  &:hover
+  {
+    background-color: $equalColorHover1;
+  }
+}
+
+.equals-2
+{
+  background-color: $equalColor2;
+  box-shadow: 0px 5px $equalShadow2;
+  color: $whiteTextColor;
+  &:hover
+  {
+    background-color: $equalColorHover2;
+  }
+}
+
+.equals-3
+{
+  background-color: $equalColor3;
+  box-shadow: 0px 5px $equalShadow3;
+  color: $whiteTextColor;
+  &:hover
+  {
+    background-color: $equalColorHover3;
+  }
+}
+
+#equals
+{
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  font-size: 24px;
+  height: 60px;
+  justify-content: center;
+  width: 140px;
+}
+
+.slider-1
+{
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 75px;
+}
+
+.slider-1::-webkit-slider-runnable-track 
+{
+  -webkit-appearance: none;
+  background-color: $calculatorColor1;
+  border: none;
+  border-radius: 20px;
+  height: 25px;
+  padding: 0px 5px;
+}
+
+.slider-1::-webkit-slider-thumb 
+{
+  -webkit-appearance: none;
+  background-color: red;
+  border-radius: 50%;
+  height: 15px;
+  margin-top: 5px;
+  width: 15px;  
+}
+
+.slider-2
+{
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 75px;
+}
+
+.slider-2::-webkit-slider-runnable-track 
+{
+  -webkit-appearance: none;
+  background-color: $calculatorColor2;
+  border: none;
+  border-radius: 20px;
+  height: 25px;
+  padding: 0px 5px;
+}
+
+.slider-2::-webkit-slider-thumb 
+{
+  -webkit-appearance: none;
+  background-color: red;
+  border-radius: 50%;
+  height: 15px;
+  margin-top: 5px;
+  width: 15px;  
+}
+
+.slider-3
+{
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 75px;
+}
+
+.slider-3::-webkit-slider-runnable-track 
+{
+  -webkit-appearance: none;
+  background-color: $calculatorColor3;
+  border: none;
+  border-radius: 20px;
+  height: 25px;
+  padding: 0px 5px;
+}
+
+.slider-3::-webkit-slider-thumb 
+{
+  -webkit-appearance: none;
+  background-color: $equalColor3;
+  border-radius: 50%;
+  height: 15px;
+  margin-top: 5px;
+  width: 15px;  
+}
+
+@media screen and (min-width: 1440px)
+{
+  .title-container
+  {
+    width: 700px;
+  }
+
+  #screen
+  {
+    width: 700px;
+  }
+
+  #calculator-pad
+  {
+    width: 700px;
+    .grid-1
+    {
+      column-gap: 40px;
+      row-gap: 40px;
+    }
+    .grid-2
+    {
+      column-gap: 40px;
+      margin-top: 40px;
+    }
+  }
+
+  #reset
+  {
+    width: 300px;
+  }
+
+  #equals
+  {
+    width: 300px;
+  }
+
+  .number-button-1, .number-button-2,.number-button-3
+  {
+    width: 120px;
+  }
+
+  .command-button-1, .command-button-2,.command-button-3
+  {
+    width: 120px;
+  }
+}

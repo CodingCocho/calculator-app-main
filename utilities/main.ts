@@ -17,6 +17,7 @@ let calcScreenDisplay: string | number = '';
 let num1: number | undefined;
 let num2: number | undefined;
 let operand: string = '';
+let hasDecimal: boolean = false;
 
 /*
 * Handle the theme change for the theme slider
@@ -140,6 +141,9 @@ const setOperand = (userOperand: string): void =>
 
   // Set the operand state
   operand = userOperand;
+
+  // Set the decimal state
+  hasDecimal = false;
 }
 
 /*
@@ -235,6 +239,27 @@ const handleDelete = (): void =>
 }
 
 /*
+* Handle the decimal point
+* @param none
+* @return void
+*/
+const handleDecimalPoint = (): void =>
+{
+
+  // Check if there is a decimal
+  if(hasDecimal)
+  {
+    throwError();
+    return;
+  }
+
+  // Else add the decimal
+  calcScreenDisplay = calcScreenDisplay.toString() + '.';
+  calcScreen!.innerText = calcScreen!.innerText + '.';
+  hasDecimal = true;
+}
+
+/*
 * Handle the format of the calculator screen
 * @param none
 * @return void
@@ -254,10 +279,20 @@ const checkFormat = (): void =>
     return;
   }
 
-  // Loop through the string
-  for(let counter: number = calcScreenDisplay.toString().length-1; counter >= 0; counter--)
+  // Hold start for loop
+  let start: number =  calcScreenDisplay.toString().length-1;
+
+  // Decimal check
+  if(hasDecimal)
   {
-    
+    start = calcScreenDisplay.toString().indexOf('.')-1;
+  }
+
+
+  // Loop through the string
+  for(let counter: number = start; counter >= 0; counter--)
+  {
+
     // Check for comma placements
     if(commaCounter === 3)
     {

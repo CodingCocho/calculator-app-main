@@ -15,6 +15,7 @@ var calcScreenDisplay = '';
 var num1;
 var num2;
 var operand = '';
+var hasDecimal = false;
 /*
 * Handle the theme change for the theme slider
 * @param none
@@ -114,6 +115,8 @@ var setOperand = function (userOperand) {
     calcScreen.innerText = calcScreenDisplay;
     // Set the operand state
     operand = userOperand;
+    // Set the decimal state
+    hasDecimal = false;
 };
 /*
 * Handle the operand and the numbers
@@ -184,6 +187,22 @@ var handleDelete = function () {
     calcScreen.innerText = '';
 };
 /*
+* Handle the decimal point
+* @param none
+* @return void
+*/
+var handleDecimalPoint = function () {
+    // Check if there is a decimal
+    if (hasDecimal) {
+        throwError();
+        return;
+    }
+    // Else add the decimal
+    calcScreenDisplay = calcScreenDisplay.toString() + '.';
+    calcScreen.innerText = calcScreen.innerText + '.';
+    hasDecimal = true;
+};
+/*
 * Handle the format of the calculator screen
 * @param none
 * @return void
@@ -197,8 +216,14 @@ var checkFormat = function () {
         throwError();
         return;
     }
+    // Hold start for loop
+    var start = calcScreenDisplay.toString().length - 1;
+    // Decimal check
+    if (hasDecimal) {
+        start = calcScreenDisplay.toString().indexOf('.') - 1;
+    }
     // Loop through the string
-    for (var counter = calcScreenDisplay.toString().length - 1; counter >= 0; counter--) {
+    for (var counter = start; counter >= 0; counter--) {
         // Check for comma placements
         if (commaCounter === 3) {
             // Reset counter

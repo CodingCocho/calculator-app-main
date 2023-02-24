@@ -223,6 +223,7 @@ const reset = (): void =>
   calcScreenDisplay = '';
   calcScreen!.innerText = '';
   num1 = undefined, num2 = undefined;
+  hasDecimal = false;
 }
 
 /*
@@ -236,6 +237,7 @@ const handleDelete = (): void =>
   // Reset current display and screen numbers
   calcScreenDisplay = '';
   calcScreen!.innerText = '';
+  hasDecimal = false;
 }
 
 /*

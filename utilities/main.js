@@ -175,6 +175,7 @@ var reset = function () {
     calcScreenDisplay = '';
     calcScreen.innerText = '';
     num1 = undefined, num2 = undefined;
+    hasDecimal = false;
 };
 /*
 * Handle delete button
@@ -185,6 +186,7 @@ var handleDelete = function () {
     // Reset current display and screen numbers
     calcScreenDisplay = '';
     calcScreen.innerText = '';
+    hasDecimal = false;
 };
 /*
 * Handle the decimal point
